@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app">
+      <header id="app-title">
+        <h1>Palette Picker</h1>
+      </header>
+
+      <main>
+        <form id="palette-form" aria-labelledby="form-heading">
+          <h2 id="form-heading">Add a Palette</h2>
+
+          <label for="palette-title">Palette Title:</label>
+          <input type="text" name="paletteTitle" id="palette-title" required />
+
+          <label for="color-1">Color #1</label>
+          <input type="color" name="color1" id="color-1" />
+
+          <label for="color-2">Color #2</label>
+          <input type="color" name="color2" id="color-2" />
+
+          <label for="color-3">Color #3</label>
+          <input type="color" name="color3" id="color-3" />
+
+          <fieldset>
+            <legend>Temperature</legend>
+            <input type="radio" name="temperature" id="warm" value="warm" />
+            <label for="warm">Warm</label>
+
+            <input
+              type="radio"
+              name="temperature"
+              id="neutral"
+              value="neutral"
+              checked
+            />
+            <label for="neutral">Neutral</label>
+
+            <input type="radio" name="temperature" id="cool" value="cool" />
+            <label for="cool">Cool</label>
+          </fieldset>
+
+          <button>Create the Palette</button>
+        </form>
+
+        <header id="list-title">
+          <h2>Palettes</h2>
+        </header>
+
+        <ul id="palette-list" aria-labelledby="list-title"></ul>
+      </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
